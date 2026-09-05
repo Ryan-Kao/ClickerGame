@@ -37,7 +37,10 @@ monster.addEventListener("click", () => {
 
     newStageDisplay.textContent = stage;
     coinsDisplay.textContent = currentCoins;
-    monsterHPDisplay.textContent = monsterHP;
+    const healthBar = document.getElementById('monsterHP');
+    healthBar.value = monsterHP;
+    healthBar.max = monsterMaxHP;
+    // monsterHPDisplay.textContent = monsterHP;
 });
 
 

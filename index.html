@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="StageInfo">
+        <p> Stage: <span id="currentStage"> 1 </span></p>
+    </div>
+
     <div id="monster"></div>
-    <p> Stage: <span id="currentStage"> 1 </span></p>
-    <p> Monster HP: <span id="monsterHP"> 50 </span></p>
+
+    <div id="monsterHPInfo">
+        <progress id="monsterHP" value="50" max="50"></progress>
+        <!-- <p> Monster HP: <span id="monsterHP"> 50 </span></p> -->
+    </div>
 
     <br>
     <p> Click Power: <span id = "currentClickPower"> 1 </span></p>
