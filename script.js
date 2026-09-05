@@ -23,6 +23,8 @@ const autoClickerDisplay = document.querySelector("#currentAutoClickers");
 const coinsDisplay = document.querySelector("#currentCoins");
 const newStageDisplay = document.querySelector("#currentStage");
 const hpFill = document.querySelector("#hpFill");
+const currentHPDisplay = document.querySelector("#bossCurrentHP");
+const maxHPDisplay = document.querySelector("#bossMaxHP");
 
 monster.addEventListener("click", () => {
     monsterHP -= clickPower;
@@ -36,9 +38,11 @@ monster.addEventListener("click", () => {
         monsterHP = Math.round(monsterMaxHP);
     }
 
+    currentHPDisplay.textContent = monsterHP;
     newStageDisplay.textContent = stage;
     coinsDisplay.textContent = currentCoins;
     hpFill.style.width = (monsterHP / monsterMaxHP) * 100 + "%";
+    maxHPDisplay.textContent = monsterMaxHP;
 });
 
 
