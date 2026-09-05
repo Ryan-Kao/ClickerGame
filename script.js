@@ -42,7 +42,7 @@ monster.addEventListener("click", () => {
     newStageDisplay.textContent = stage;
     coinsDisplay.textContent = currentCoins;
     hpFill.style.width = (monsterHP / monsterMaxHP) * 100 + "%";
-    maxHPDisplay.textContent = monsterMaxHP;
+    maxHPDisplay.textContent = Math.round(monsterMaxHP);
 });
 
 
@@ -85,6 +85,8 @@ function autoClicker() {
 
     coinsDisplay.textContent = currentCoins;
     hpFill.style.width = (monsterHP / monsterMaxHP) * 100 + "%";
+    maxHPDisplay.textContent = Math.round(monsterMaxHP);
+    currentHPDisplay.textContent = monsterHP;
 }
 
 setInterval(autoClicker, 2000);
