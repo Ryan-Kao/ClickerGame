@@ -22,7 +22,7 @@ const clickPowerDisplay = document.querySelector("#currentClickPower");
 const autoClickerDisplay = document.querySelector("#currentAutoClickers");
 const coinsDisplay = document.querySelector("#currentCoins");
 const newStageDisplay = document.querySelector("#currentStage");
-const healthBar = document.getElementById('monsterHP');
+const hpFill = document.querySelector("#hpFill");
 
 monster.addEventListener("click", () => {
     monsterHP -= clickPower;
@@ -38,8 +38,7 @@ monster.addEventListener("click", () => {
 
     newStageDisplay.textContent = stage;
     coinsDisplay.textContent = currentCoins;
-    healthBar.value = monsterHP;
-    healthBar.max = monsterMaxHP;
+    hpFill.style.width = (monsterHP / monsterMaxHP) * 100 + "%";
 });
 
 
@@ -81,8 +80,7 @@ function autoClicker() {
     }
 
     coinsDisplay.textContent = currentCoins;
-    healthBar.value = monsterHP;
-    healthBar.max = monsterMaxHP;
+    hpFill.style.width = (monsterHP / monsterMaxHP) * 100 + "%";
 }
 
 setInterval(autoClicker, 2000);
