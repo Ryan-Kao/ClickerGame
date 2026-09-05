@@ -1,0 +1,13 @@
+#monster {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    background: url('Images/chomp_idle.png') no-repeat;
+    background-position: -64px 0;
+    background-size: 256px 192px;
+    transition: transform 0.1s ease;
+}
+
+#monster:active {
+    transform: scale(0.9);
+}

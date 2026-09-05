@@ -10,7 +10,7 @@ let currentCoins = 0;
 let coinsGained = 100;
 let stage = 1;
 
-const button = document.querySelector("#btn");
+const monster = document.querySelector("#monster");
 const upgrade = document.querySelector("#upgrade");
 const autoClickerBtn = document.querySelector("#autoClickerBtn")
 const monsterHPDisplay = document.querySelector("#monsterHP");
@@ -23,7 +23,7 @@ const autoClickerDisplay = document.querySelector("#currentAutoClickers");
 const coinsDisplay = document.querySelector("#currentCoins");
 const newStageDisplay = document.querySelector("#currentStage");
 
-button.addEventListener("click", () => {
+monster.addEventListener("click", () => {
     monsterHP -= clickPower;
     monsterHP -= clickPower2;
 
